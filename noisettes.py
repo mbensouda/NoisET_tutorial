@@ -549,9 +549,9 @@ def _experimental_sampling_diffusion_NegBin(NreadsI, NreadsII, paras, x_0, x_2, 
 class longitudinal_analysis():
 
     """
-    A class used to represent longitudinal RepSeq data and pre-analysis of the longitudinal data associated with
-    one individual.
-
+    This class provides some tool to inspect and compute some simple statistics on longitudinal data associated with
+    one individual (it is independent of the NoisET software).
+    
     ...
 
     Attributes
@@ -559,7 +559,8 @@ class longitudinal_analysis():
     patient : str
         the patient label associated with the data
     data_foler : str
-        the name of the animal
+        folder name containing the csv files listing the T-cell receptors. Note that those files need to 
+        be properly formatted as described in the import_clones() method
     replicate_1D : str
         the default first replicate label is '_F1' but can be modified by the user to match the used data
     replicate_2D : str
